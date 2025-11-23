@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/cx_analytics}
+    username: ${SPRING_DATASOURCE_USERNAME:cxuser}
+    password: ${SPRING_DATASOURCE_PASSWORD:cxpass}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: 6379
